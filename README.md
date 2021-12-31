@@ -35,6 +35,11 @@ puts Txt2tenji::generate_txt "KO RE KA RA YO RO SI KU O NE GA I SI MA SU"
 # -● ●● ●- ●- -● -● ●- ●● -● ●● -- ●- ●- ●- ●- ●●
 # ●- ●● -- -● -● ●● ●● -- ●- ●- -● -- ●- ●● -● -●
 # -● -- -● -- ●- -- -● -● -- ●- -- -● -- -● ●● -●
+
+puts Txt2tenji::generate_txt "BYA KU YA"
+#-● ●- ●● -●
+#-● -- -- --
+#-- ●● -● ●-
 ```
 
 ## Development
