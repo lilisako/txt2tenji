@@ -44,6 +44,10 @@ RSpec.describe Txt2tenji do
       it "ヤ行" do
         expect(Txt2tenji::generate_txt('YA YU YO')).to eq("-● -● -●\n-- -- -●\n●- ●● ●-")
       end
+
+      it "ワ行" do
+        expect(Txt2tenji::generate_txt('WA')).to eq("--\n--\n●-")
+      end
     end
 
     context '濁音' do
