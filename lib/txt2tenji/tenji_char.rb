@@ -40,13 +40,13 @@ class TenjiChar
     # 母音のアルファベット
     vowel = filled_char[1]
 
-    get_vowel(vowel, consonant) + get_consonant(consonant)
+    vowel(vowel, consonant) + consonant(consonant)
   end
 
   private
 
   # 母音の配列を返す
-  def get_vowel(vowel, consonant)
+  def vowel(vowel, consonant)
     if ['Y', 'W'].include? consonant
       # や行とわ行は母音を最終行にずらす
       move_vowel_to_bottom(VOWELS[vowel.to_sym])
@@ -56,7 +56,7 @@ class TenjiChar
   end
 
   # 子音の配列を返す
-  def get_consonant(consonant)
+  def consonant(consonant)
     CONSONANTS[consonant.to_sym]
   end
 

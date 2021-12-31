@@ -2,11 +2,9 @@ require_relative "tenji_char"
 
 class TenjiBuilder
   def initialize(text)
-    @arrs = []
     @text = text
-
-    translatable_text.split(" ").each do |char|
-      @arrs << TenjiChar.new(char).tenji_array
+    @arrs = translatable_text.split(" ").map do |char|
+      TenjiChar.new(char).tenji_array
     end
   end
 
