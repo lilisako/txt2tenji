@@ -23,6 +23,7 @@ RSpec.describe Txt2tenji do
 
       it "タ行" do
         expect(Txt2tenji::generate_txt('TA TI TU TE TO')).to eq("●- ●- ●● ●● -●\n-● ●● -● ●● ●●\n●- ●- ●- ●- ●-")
+        expect(Txt2tenji::generate_txt('CHI')).to eq("●-\n●●\n●-")
       end
 
       it "ナ行" do
@@ -82,8 +83,16 @@ RSpec.describe Txt2tenji do
     end
 
     context '小さいや・ゆ・よ' do
+      it "カ行" do
+        expect(Txt2tenji::generate_txt('KYA KYU KYO')).to eq("-● ●- -● ●● -● -●\n-- -- -- -- -- ●-\n-- -● -- -● -- -●")
+      end
+
       it "サ行" do
         expect(Txt2tenji::generate_txt('SHA SHU SHO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- -● -- -● -- -●")
+      end
+
+      it "タ行" do
+        expect(Txt2tenji::generate_txt('CHA CHU CHO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- ●- -- ●- -- ●-")
       end
     end
   end
