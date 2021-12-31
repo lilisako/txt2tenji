@@ -73,6 +73,12 @@ RSpec.describe Txt2tenji do
       end
     end
 
+    context '半濁音' do
+      it "パ行" do
+        expect(Txt2tenji::generate_txt('PA PI PU')).to eq("-- ●- -- ●- -- ●●\n-- -- -- ●- -- --\n-● ●● -● ●● -● ●●")
+      end
+    end
+
     context '小さいや・ゆ・よ' do
       it "サ行" do
         expect(Txt2tenji::generate_txt('SHA SHU SHO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- -● -- -● -- -●")
