@@ -7,7 +7,7 @@ module Txt2tenji
   class Error < StandardError; end
 
   module_function
-  def generate(text)
+  def generate_txt(text)
     TenjiBuilder.new(text).txt
   end
 end

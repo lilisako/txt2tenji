@@ -7,22 +7,22 @@ RSpec.describe Txt2tenji do
     end
   end
 
-  describe '#generate' do
+  describe '#generate_txt' do
     context '清音' do
       it "ア行" do
-        expect(Txt2tenji::generate('A I')).to eq("●- ●-\n-- ●-\n-- --")
+        expect(Txt2tenji::generate_txt('A I')).to eq("●- ●-\n-- ●-\n-- --")
       end
     end
 
     context '濁音' do
       it "ガ行" do
-        expect(Txt2tenji::generate('GA GI GU')).to eq("-- ●- -- ●- -- ●●\n-● -- -● ●- -● --\n-- -● -- -● -- -●")
+        expect(Txt2tenji::generate_txt('GA GI GU')).to eq("-- ●- -- ●- -- ●●\n-● -- -● ●- -● --\n-- -● -- -● -- -●")
       end
     end
 
     context '小さいや・ゆ・よ' do
       it "サ行" do
-        expect(Txt2tenji::generate('SHA SHU SHO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- -● -- -● -- -●")
+        expect(Txt2tenji::generate_txt('SHA SHU SHO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- -● -- -● -- -●")
       end
     end
   end
