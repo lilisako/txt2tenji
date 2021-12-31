@@ -16,6 +16,10 @@ RSpec.describe Txt2tenji do
       it "カ行" do
         expect(Txt2tenji::generate_txt('KA KI KU KE KO')).to eq("●- ●- ●● ●● -●\n-- ●- -- ●- ●-\n-● -● -● -● -●")
       end
+
+      it "サ行" do
+        expect(Txt2tenji::generate_txt('SA SI SU SE SO')).to eq("●- ●- ●● ●● -●\n-● ●● -● ●● ●●\n-● -● -● -● -●")
+      end
     end
 
     context '濁音' do
