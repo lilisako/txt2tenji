@@ -47,6 +47,7 @@ RSpec.describe Txt2tenji do
 
       it "ワ行" do
         expect(Txt2tenji::generate_txt('WA')).to eq("--\n--\n●-")
+        expect(Txt2tenji::generate_txt('N')).to eq("--\n-●\n●●")
       end
     end
 
