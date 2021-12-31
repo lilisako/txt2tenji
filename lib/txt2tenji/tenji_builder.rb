@@ -3,8 +3,10 @@ require_relative "tenji_char"
 class TenjiBuilder
   def initialize(text)
     @arrs = []
+    text = text.gsub("G", "G K")
+    text = text.gsub("SH", "Y S")
     text.split(" ").each do |char|
-      @arrs << TenjiChar.new(char).tenji_array
+      @arrs << TenjiChar.new(char).tenji_array.flatten(1)
     end
   end
 

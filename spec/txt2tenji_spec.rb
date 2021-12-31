@@ -13,5 +13,17 @@ RSpec.describe Txt2tenji do
         expect(Txt2tenji::generate('A I')).to eq("●- ●-\n-- ●-\n-- --")
       end
     end
+
+    context '濁音' do
+      it "ガ行" do
+        expect(Txt2tenji::generate('GA GI GU')).to eq("-- ●- -- ●- -- ●●\n-● -- -● ●- -● --\n-- -● -- -● -- -●")
+      end
+    end
+
+    context '小さいや・ゆ・よ' do
+      it "サ行" do
+        expect(Txt2tenji::generate('SHA SHU SHO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- -● -- -● -- -●")
+      end
+    end
   end
 end
