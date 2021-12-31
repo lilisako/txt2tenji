@@ -94,6 +94,42 @@ RSpec.describe Txt2tenji do
       it "タ行" do
         expect(Txt2tenji::generate_txt('CHA CHU CHO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- ●- -- ●- -- ●-")
       end
+
+      it "ナ行" do
+        expect(Txt2tenji::generate_txt('NYA NYU NYO')).to eq("-● ●- -● ●● -● -●\n-- -- -- -- -- ●-\n-- ●- -- ●- -- ●-")
+      end
+
+      it "ハ行" do
+        expect(Txt2tenji::generate_txt('HYA HYU HYO')).to eq("-● ●- -● ●● -● -●\n-- -- -- -- -- ●-\n-- ●● -- ●● -- ●●")
+      end
+
+      it "マ行" do
+        expect(Txt2tenji::generate_txt('MYA MYU MYO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- ●● -- ●● -- ●●")
+      end
+
+      it "ラ行" do
+        expect(Txt2tenji::generate_txt('RYA RYU RYO')).to eq("-● ●- -● ●● -● -●\n-- -● -- -● -- ●●\n-- -- -- -- -- --")
+      end
+
+      it "ガ行" do
+        expect(Txt2tenji::generate_txt('GYA GYU GYO')).to eq("-● ●- -● ●● -● -●\n-● -- -● -- -● ●-\n-- -● -- -● -- -●")
+      end
+
+      it "ザ行" do
+        expect(Txt2tenji::generate_txt('JA JU JO')).to eq("-● ●- -● ●● -● -●\n-● -● -● -● -● ●●\n-- -● -- -● -- -●")
+      end
+
+      it "ダ行" do
+        expect(Txt2tenji::generate_txt('DYA DYU DYO')).to eq("-● ●- -● ●● -● -●\n-● -● -● -● -● ●●\n-- ●- -- ●- -- ●-")
+      end
+
+      it "バ行" do
+        expect(Txt2tenji::generate_txt('BYA BYU BYO')).to eq("-● ●- -● ●● -● -●\n-● -- -● -- -● ●-\n-- ●● -- ●● -- ●●")
+      end
+
+      it "パ行" do
+        expect(Txt2tenji::generate_txt('PYA PYU PYO')).to eq("-● ●- -● ●● -● -●\n-- -- -- -- -- ●-\n-● ●● -● ●● -● ●●")
+      end
     end
   end
 end
