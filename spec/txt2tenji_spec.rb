@@ -67,6 +67,10 @@ RSpec.describe Txt2tenji do
       it "ダ行" do
         expect(Txt2tenji::generate_txt('DA DI DU')).to eq("-- ●- -- ●- -- ●●\n-● -● -● ●● -● -●\n-- ●- -- ●- -- ●-")
       end
+
+      it "バ行" do
+        expect(Txt2tenji::generate_txt('BA BI BU')).to eq("-- ●- -- ●- -- ●●\n-● -- -● ●- -● --\n-- ●● -- ●● -- ●●")
+      end
     end
 
     context '小さいや・ゆ・よ' do

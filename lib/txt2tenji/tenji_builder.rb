@@ -22,7 +22,7 @@ class TenjiBuilder
 
   def translatable_text
     @text
-      .gsub("G", ": K").gsub("Z", ": S").gsub("D", ": T")
+      .gsub("G", ": K").gsub("Z", ": S").gsub("D", ": T").gsub("B", ": H")
       .gsub("SH", "* S")
   end
 
