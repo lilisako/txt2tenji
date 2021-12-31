@@ -36,6 +36,10 @@ RSpec.describe Txt2tenji do
       it "マ行" do
         expect(Txt2tenji::generate_txt('MA MI MU ME MO')).to eq("●- ●- ●● ●● -●\n-● ●● -● ●● ●●\n●● ●● ●● ●● ●●")
       end
+
+      it "ラ行" do
+        expect(Txt2tenji::generate_txt('RA RI RU RE RO')).to eq("●- ●- ●● ●● -●\n-● ●● -● ●● ●●\n-- -- -- -- --")
+      end
     end
 
     context '濁音' do
