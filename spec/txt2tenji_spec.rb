@@ -24,6 +24,10 @@ RSpec.describe Txt2tenji do
       it "タ行" do
         expect(Txt2tenji::generate_txt('TA TI TU TE TO')).to eq("●- ●- ●● ●● -●\n-● ●● -● ●● ●●\n●- ●- ●- ●- ●-")
       end
+
+      it "ナ行" do
+        expect(Txt2tenji::generate_txt('NA NI NU NE NO')).to eq("●- ●- ●● ●● -●\n-- ●- -- ●- ●-\n●- ●- ●- ●- ●-")
+      end
     end
 
     context '濁音' do
