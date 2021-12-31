@@ -1,8 +1,5 @@
 # Txt2tenji
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/txt2tenji`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem allows you to convert any text into Japanese braille(Tenji). テキスト入力を点字に変換するライブラリです
 
 ## Installation
 
@@ -22,7 +19,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+puts Txt2tenji::generate_txt "A I SU" 
+#=>
+# ●- ●- ●●
+# -- ●- -●
+# -- -- -●
+
+puts Txt2tenji::generate_txt "KO N NI TI WA"
+# -● -- ●- ●- --
+# ●- -● ●- ●● --
+# -● ●● ●- ●- ●-
+
+puts Txt2tenji::generate_txt "KO RE KA RA YO RO SI KU O NE GA I SI MA SU"
+# -● ●● ●- ●- -● -● ●- ●● -● ●● -- ●- ●- ●- ●- ●●
+# ●- ●● -- -● -● ●● ●● -- ●- ●- -● -- ●- ●● -● -●
+# -● -- -● -- ●- -- -● -● -- ●- -- -● -- -● ●● -●
+```
 
 ## Development
 
@@ -32,4 +45,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/txt2tenji.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lilisako/txt2tenji.
