@@ -50,9 +50,11 @@ RSpec.describe Txt2tenji do
         expect(Txt2tenji::generate_txt('N')).to eq("--\n-●\n●●")
       end
 
-      #it "小さいつ" do
-      #  expect(Txt2tenji::generate_txt('KI TTE')).to eq("●- -- ●●\n●- ●- ●●\n-● -- ●-")
-      #end
+      it "小さいつ" do
+        expect(Txt2tenji::generate_txt('KI TTE')).to eq("●- -- ●●\n●- ●- ●●\n-● -- ●-")
+        expect(Txt2tenji::generate_txt('I PPA I')).to eq("●- -- -- ●- ●-\n●- ●- -- -- ●-\n-- -- -● ●● --")
+        expect(Txt2tenji::generate_txt('RA PPU')).to eq("●- -- -- ●●\n-● ●- -- --\n-- -- -● ●●")
+      end
     end
 
     context '濁音' do

@@ -22,9 +22,10 @@ class TenjiBuilder
 
   def translatable_text
     @text
-      .gsub("G", ": K").gsub("Z", ": S").gsub("D", ": T").gsub("B", ": H")
-      .gsub("P", "; H")
-      .gsub("SH", "* S")
+      .gsub(/(.)\1+/){ |s| "_ " + s[1..] } # 促音
+      .gsub("G", ": K").gsub("Z", ": S").gsub("D", ": T").gsub("B", ": H") # 濁音
+      .gsub("P", "; H") # 半濁音
+      .gsub("SH", "* S") # 拗音
   end
 
   # 与えられたインデックスに対してoか-で返す
