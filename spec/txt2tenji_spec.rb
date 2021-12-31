@@ -10,7 +10,11 @@ RSpec.describe Txt2tenji do
   describe '#generate_txt' do
     context '清音' do
       it "ア行" do
-        expect(Txt2tenji::generate_txt('A I')).to eq("●- ●-\n-- ●-\n-- --")
+        expect(Txt2tenji::generate_txt('A I U E O')).to eq("●- ●- ●● ●● -●\n-- ●- -- ●- ●-\n-- -- -- -- --")
+      end
+
+      it "カ行" do
+        expect(Txt2tenji::generate_txt('KA KI KU KE KO')).to eq("●- ●- ●● ●● -●\n-- ●- -- ●- ●-\n-● -● -● -● -●")
       end
     end
 

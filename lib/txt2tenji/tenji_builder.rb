@@ -6,7 +6,7 @@ class TenjiBuilder
     @text = text
 
     translatable_text.split(" ").each do |char|
-      @arrs << TenjiChar.new(char).tenji_array.flatten(1)
+      @arrs << TenjiChar.new(char).tenji_array
     end
   end
 
