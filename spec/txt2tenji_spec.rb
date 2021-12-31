@@ -1,11 +1,17 @@
 # frozen_string_literal: true
 
 RSpec.describe Txt2tenji do
-  it "has a version number" do
-    expect(Txt2tenji::VERSION).not_to be nil
+  describe 'VERSION' do
+    it "has a version number" do
+      expect(Txt2tenji::VERSION).not_to be nil
+    end
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe '#generate' do
+    context '清音' do
+      it "ア行" do
+        expect(Txt2tenji::generate('A I')).to eq("●- ●-\n-- ●-\n-- --")
+      end
+    end
   end
 end
