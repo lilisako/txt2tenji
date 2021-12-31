@@ -131,5 +131,11 @@ RSpec.describe Txt2tenji do
         expect(Txt2tenji::generate_txt('PYA PYU PYO')).to eq("-● ●- -● ●● -● -●\n-- -- -- -- -- ●-\n-● ●● -● ●● -● ●●")
       end
     end
+
+    context '対応する点字がない場合' do
+      it "英語" do
+        expect{Txt2tenji::generate_txt('ERROR')}.to raise_error(ArgumentError, "Could not find the corresponding Tenji / 対応する点字を見つけることができませんでした")
+      end
+    end
   end
 end

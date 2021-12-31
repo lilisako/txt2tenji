@@ -42,7 +42,10 @@ class TenjiChar
     # 母音のアルファベット
     vowel = filled_char[1]
 
-    vowel(vowel, consonant) + consonant(consonant)
+    vowel_idx = vowel(vowel, consonant)
+    consonant_idx = consonant(consonant)
+    raise ArgumentError, "Could not find the corresponding Tenji / 対応する点字を見つけることができませんでした" if vowel_idx.nil? || consonant_idx.nil?
+    vowel_idx + consonant_idx
   end
 
   private
