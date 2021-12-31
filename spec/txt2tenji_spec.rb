@@ -49,11 +49,19 @@ RSpec.describe Txt2tenji do
         expect(Txt2tenji::generate_txt('WA')).to eq("--\n--\n●-")
         expect(Txt2tenji::generate_txt('N')).to eq("--\n-●\n●●")
       end
+
+      #it "小さいつ" do
+      #  expect(Txt2tenji::generate_txt('KI TTE')).to eq("●- -- ●●\n●- ●- ●●\n-● -- ●-")
+      #end
     end
 
     context '濁音' do
       it "ガ行" do
         expect(Txt2tenji::generate_txt('GA GI GU')).to eq("-- ●- -- ●- -- ●●\n-● -- -● ●- -● --\n-- -● -- -● -- -●")
+      end
+
+      it "ザ行" do
+        expect(Txt2tenji::generate_txt('ZA ZI ZU')).to eq("-- ●- -- ●- -- ●●\n-● -● -● ●● -● -●\n-- -● -- -● -- -●")
       end
     end
 

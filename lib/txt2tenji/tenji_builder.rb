@@ -21,7 +21,9 @@ class TenjiBuilder
   private
 
   def translatable_text
-    @text.gsub("G", ": K").gsub("SH", "* S")
+    @text
+      .gsub("G", ": K").gsub("Z", ": S")
+      .gsub("SH", "* S")
   end
 
   # 与えられたインデックスに対してoか-で返す
