@@ -2,7 +2,7 @@ require_relative "tenji_char"
 
 class TenjiBuilder
   def initialize(text)
-    @text = text
+    @text = text.upcase
     @arrs = translatable_text.split(" ").map do |char|
       TenjiChar.new(char).tenji_array
     end
