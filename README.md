@@ -20,23 +20,23 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-puts Txt2tenji::generate_txt "A I SU" 
+puts Txt2tenji.generate_txt "A I SU"
 #=>
 # ●- ●- ●●
 # -- ●- -●
 # -- -- -●
 
-puts Txt2tenji::generate_txt "KO N NI TI WA"
+puts Txt2tenji.generate_txt "KO N NI TI WA"
 # -● -- ●- ●- --
 # ●- -● ●- ●● --
 # -● ●● ●- ●- ●-
 
-puts Txt2tenji::generate_txt "KO RE KA RA YO RO SI KU O NE GA I SI MA SU"
+puts Txt2tenji.generate_txt "KO RE KA RA YO RO SI KU O NE GA I SI MA SU"
 # -● ●● ●- ●- -● -● ●- ●● -● ●● -- ●- ●- ●- ●- ●●
 # ●- ●● -- -● -● ●● ●● -- ●- ●- -● -- ●- ●● -● -●
 # -● -- -● -- ●- -- -● -● -- ●- -- -● -- -● ●● -●
 
-puts Txt2tenji::generate_txt "BYA KU YA"
+puts Txt2tenji.generate_txt "BYA KU YA"
 #-● ●- ●● -●
 #-● -- -- --
 #-- ●● -● ●-
